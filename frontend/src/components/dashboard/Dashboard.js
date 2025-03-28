@@ -14,14 +14,14 @@ const Dashboard = () => {
         const token = localStorage.getItem('token');
         
         // Fetch user data
-        const userRes = await axios.get('http://localhost:5000/api/auth/user', {
+        const userRes = await axios.get('https://monkettypeclone.onrender.com/api/auth/user', {
           headers: { 'x-auth-token': token }
         });
         
         setUser(userRes.data);
         
         // Fetch user's sessions
-        const sessionsRes = await axios.get(`http://localhost:5000/api/sessions/${userRes.data._id}`, {
+        const sessionsRes = await axios.get(`https://monkettypeclone.onrender.com/api/sessions/${userRes.data._id}`, {
           headers: { 'x-auth-token': token }
         });
         

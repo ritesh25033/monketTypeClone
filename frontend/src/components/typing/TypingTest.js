@@ -84,7 +84,7 @@ const TypingTest = () => {
     }
     
     try {
-      await axios.post('http://localhost:5000/api/sessions', {
+      await axios.post('https://monkettypeclone.onrender.com/api/sessions', {
         wpm,
         accuracy,
         totalErrors
